@@ -23,6 +23,8 @@ public class User implements Serializable{
 	@TableField("address")
 	private String address;
 
+	private Role role;
+
 	public String getId() {
 		return id;
 	}
