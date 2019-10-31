@@ -24,6 +24,11 @@ public class UserServiceImpl implements UserService {
 		int insert = usermapper.insert(user);
 		return insert;
 	}
-	
-	
+
+	@Override
+	public int updateEntity(User user) {
+		return usermapper.updateById(user);
+	}
+
+
 }

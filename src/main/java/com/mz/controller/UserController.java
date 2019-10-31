@@ -72,10 +72,19 @@ public class UserController {
 			logger.error("上传文件出现了错误---->{}",e);
 		}
 		logger.info("上传文件成功");
-
 		logger.info("开始解析excel");
-
 		return "success";
+	}
+
+
+	@RequestMapping(value = "/update",method = RequestMethod.GET)
+	public void setUpload(){
+		User user=new User();
+		user.setId("1");
+		user.setAddress("南京");
+		user.setSex("男");
+		int i = userservice.updateEntity(user);
+		logger.info("显示更新的行数 --->{}",i);
 	}
 
 
